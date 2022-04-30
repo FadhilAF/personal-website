@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
+   sodipodi:docname="logoLoadingWebsite.svg"
+   inkscape:export-filename="/home/fadhilaf/Documents/inkscape/logoWebsite.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="1.3320312"
+     inkscape:cx="219.58945"
+     inkscape:cy="269.88857"
+     inkscape:window-width="1900"
+     inkscape:window-height="1015"
+     inkscape:window-x="8"
+     inkscape:window-y="53"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 256 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="512 : 256 : 1"
+       inkscape:persp3d-origin="256 : 170.66667 : 1"
+       id="perspective14120" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;inline-size:268.841;fill:#eceff4;fill-opacity:1;stroke:none"
+       x="73.156067"
+       y="87.591827"
+       id="text20918" />
+    <path
+       id="rect81479-6-0-7"
+       style="fill:#8fbcbb;fill-opacity:1;stroke:#5e81ac;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 257.5034,23.976507 A 229.57128,229.57124 0 0 0 95.171394,91.215777 229.57128,229.57124 0 0 0 27.932124,253.54779 V 483.11907 H 257.5034 A 229.57128,229.57124 0 0 0 419.83541,415.8798 229.57128,229.57124 0 0 0 487.07468,253.54779 229.57124,229.57128 0 0 0 419.83541,91.215777 229.57124,229.57128 0 0 0 257.5034,23.976507 Z" />
+    <path
+       id="rect81479-6-0-7-5-2"
+       style="fill:#81a1c1;fill-opacity:1;stroke:#5e81ac;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 257.5034,483.11907 V 253.54779 A 229.57128,229.57124 0 0 1 190.26413,415.8798 229.57128,229.57124 0 0 1 27.932124,483.11907 Z" />
+  </g>
+</svg>
