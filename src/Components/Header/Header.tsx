@@ -1,8 +1,9 @@
 import styles from './Header.module.css';
 import logo from '../../Assets/logo.svg';
 import { Link } from "react-router-dom";
+import ToggleSwitch from '../ToggleSwitch/ToggleSwitch';
 
-function Header(props: { path: string; }) {
+function Header(props: { path: string; switchTheme: any;}) {
 
     return (
         <div className={`${styles.header} ${props.path !== '/' && styles['home-header']}`}>
@@ -22,6 +23,7 @@ function Header(props: { path: string; }) {
 						</div>
 					</div>
 					<div className={styles.switch}>
+						<ToggleSwitch label="Dark Mode" switchTheme={props.switchTheme}/>
 					</div>
 				</div>
             </div>

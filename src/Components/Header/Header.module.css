@@ -1,5 +1,6 @@
 .header {
     background-color: var(--bg-1);
+    transition: all 0.5s;
 }
 
 .header-content {
@@ -16,10 +17,11 @@
 }
 
 .non-logo {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
-
 .header-links {
     display: flex;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }

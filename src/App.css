@@ -1,6 +1,8 @@
 .App {
   text-align: center;
   background-color: var(--bg-1);
+  color: var(--fg-1);
+  transition: all .5s;
 }
 
 a {
