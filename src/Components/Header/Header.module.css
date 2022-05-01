@@ -23,13 +23,3 @@
     display: flex;
     font-size: 1.25rem;
 }
-
-.header-link a {
-    margin-left: 1rem;
-    text-decoration: none;
-    color: var(--fg-1);
-}
-
-.header-link a:hover {
-    color: var(--link);
-}
