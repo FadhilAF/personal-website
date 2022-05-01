@@ -3,7 +3,7 @@ import logo from '../../Assets/logo.svg';
 import { Link } from "react-router-dom";
 import ToggleSwitch from '../ToggleSwitch/ToggleSwitch';
 
-function Header(props: { path: string; switchTheme: any;}) {
+function Header(props: { path: string; theme: {theme: string; setTheme: any;}}) {
 
     return (
         <div className={`${styles.header} ${props.path !== '/' && styles['home-header']}`}>
@@ -23,7 +23,7 @@ function Header(props: { path: string; switchTheme: any;}) {
 						</div>
 					</div>
 					<div className={styles.switch}>
-						<ToggleSwitch label="Dark Mode" switchTheme={props.switchTheme}/>
+						<ToggleSwitch label="Dark Mode" theme={props.theme}/>
 					</div>
 				</div>
             </div>
