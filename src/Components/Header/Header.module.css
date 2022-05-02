@@ -1,13 +1,18 @@
 .header {
     background-color: var(--bg-1);
     transition: all 0.5s;
+    height: 4rem;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .header-content {
+    position: absolute;
     display: flex;
-    width : 75rem;
-    height: 4rem;
-    margin: auto;
+    width : 70rem;
+    height: 100%;
     align-items: center;
     justify-content: space-between;
 }
@@ -17,11 +22,18 @@
 }
 
 .non-logo {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    width: 15rem;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 .header-links {
     display: flex;
     font-size: 1rem;
+}
+
+@media screen and (max-width: 75rem) {
+    .header-content {
+        width: calc(100% - 5rem);
+    }
 }
