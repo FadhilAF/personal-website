@@ -3,7 +3,8 @@
     transition: all 0.5s;
     height: 4rem;
     width: 100%;
-    position: relative;
+    position: sticky;/* relative, tapi nempel */
+    top: 0; /* harus kasih tahu dimano lokasi dio pas sticky agek */
     display: flex;
     justify-content: center;
 }

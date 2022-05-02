@@ -1,0 +1,7 @@
+svg {
+    display: block;/* biar svg dianggep objek, kalo idak gek melayang*/
+    transition: all 1s;
+}
+.wave {
+    fill: var(--bg-3);
+}

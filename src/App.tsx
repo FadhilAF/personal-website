@@ -5,6 +5,7 @@ import styles from './App.module.css';
 import Header from './Components/Header/Header';
 import Home from './Pages/Home/Home';
 import Blog from './Pages/Blog/Blogs';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   const location = useLocation();
@@ -21,6 +22,7 @@ function App() {
           <Route path="/Blog" element={<Blog />} />
         </Routes>
       </div>
+      <Footer />
     </div>
   )
 }
