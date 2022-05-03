@@ -14,7 +14,7 @@ const ToggleSwitch = (props: { label: string; theme: {theme: string; setTheme: a
 	}
 
   return (
-    <div className="toggle-switch noSelect">
+    <div className="toggle-switch no-select">
       <input type="checkbox" className="checkbox" 
               name={props.label} id={props.label} onChange={switchTheme} checked={checked} />
       <label className="label" htmlFor={props.label}>

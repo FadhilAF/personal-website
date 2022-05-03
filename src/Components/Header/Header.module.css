@@ -36,6 +36,14 @@
 
 @media screen and (max-width: 75rem) {
     .header-content {
-        width: calc(100% - 5rem);
+        width: calc(100% - 80px);
+    }
+}
+@media screen and (max-width: 33.75rem ) {
+    .header-content {
+        width: calc(100% - 24px);
+    }
+    .header-link {
+        margin-right: .5rem;
     }
 }
