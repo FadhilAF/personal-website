@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: 75px 1fr 1fr;
     gap: 5rem;
-    padding: 50px 50px 100px 100px;
+    padding: 30px 80px 80px 80px;
     text-align: left;
     font-size: 0.875rem;
     color: var(--fg-4);
@@ -28,6 +28,36 @@
     font-weight: bold;
     margin-top: 0;
     margin-bottom: 0.125rem;
+}
+
+.subtitle {
+    font-weight: bold;
+    margin-bottom: 0.125rem;
+}
+
+a {
+    color: var(--fg-4);
+    transition: all .5s;
+}
+.social-medias {
+    margin-top: .5rem;
+    display: flex;
+}
+.social-medias a{
+    margin-right: 1rem;
+}
+
+.social-media-icon {
+    height: 1.5rem;
+    display: block;
+    fill: var(--fg-4);
+}
+
+a:hover .social-media-icon {
+    height: 1.5rem;
+    display: block;
+    fill: var(--link);
+    transition: all .2s;
 }
 
 @media screen and (max-width: 48rem) {

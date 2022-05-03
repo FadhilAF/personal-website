@@ -1,7 +1,7 @@
 import styles from './Header.module.css';
 import logo from '../../Assets/logo.svg';
 import { Link } from "react-router-dom";
-import ToggleSwitch from '../ToggleSwitch/ToggleSwitch';
+import ToggleSwitch from './ToggleSwitch/ToggleSwitch';
 
 function Header(props: { path: string; theme: {theme: string; setTheme: any;}}) {
 

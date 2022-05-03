@@ -32,13 +32,13 @@
   box-sizing: border-box;
 }
 .inner:before {
-  content: url(../../Assets/lightMode.svg);
+  content: url(../../../Assets/lightMode.svg);
   padding-top: 2px;
   padding-left: 4px;
   background-color: var(--bg-3);
 }
 .inner:after {
-  content: url(../../Assets/darkMode.svg);
+  content: url(../../../Assets/darkMode.svg);
   margin: auto;
   padding-top: 6px;
   padding-right: 10px;

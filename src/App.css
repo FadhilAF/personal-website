@@ -6,21 +6,19 @@
 }
 
 a {
-  margin-left: 1rem;
   text-decoration: none;
   color: var(--fg-1);
 }
 
 a:hover {
   color: var(--link);
+  transition: .2s;
 }
 
-.noSelect, a {
+.noSelect {
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
   -khtml-user-select: none;
   -ms-user-select: none;
 }
