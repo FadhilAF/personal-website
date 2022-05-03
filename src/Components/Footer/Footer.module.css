@@ -1,7 +1,7 @@
 .infos {
     background-color: var(--bg-3);
     display: grid;
-    grid-template-columns: 150px 1fr 1fr;
+    grid-template-columns: 75px 1fr 1fr;
     gap: 5rem;
     padding: 50px 50px 100px 100px;
     text-align: left;
@@ -29,4 +29,13 @@
     margin-top: 0;
     margin-bottom: 0.125rem;
 }
-/* 31.25 */
+
+@media screen and (max-width: 48rem) {
+    .infos {
+        grid-template-columns: 1fr;
+        padding: 50px 50px 100px 100px;
+    }
+    .logo {
+        width: 6rem;
+    }
+}
