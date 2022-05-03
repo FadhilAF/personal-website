@@ -15,7 +15,7 @@ function Footer() {
                     to give authentication to some special people.
                 </div>
                 <div className={styles['about-me']}>
-                    Fuck fuck 2
+                    Halo
                 </div>
             </div>
         </>
