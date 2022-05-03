@@ -1,5 +1,32 @@
 .infos {
     background-color: var(--bg-3);
-    height: 500px;
+    display: grid;
+    grid-template-columns: 150px 1fr 1fr;
+    gap: 5rem;
+    padding: 50px 50px 100px 100px;
+    text-align: left;
+    font-size: 0.875rem;
+    color: var(--fg-4);
+    transition: all 0.5s;
 } 
+
+.logo {
+    width: 100%;
+}
+
+.about-page {
+    display: block;
+    padding: 0;
+}
+
+.about-me {
+    display: block;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0.125rem;
+}
 /* 31.25 */
