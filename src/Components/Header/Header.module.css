@@ -23,9 +23,7 @@
 }
 
 .non-logo {
-    width: 15rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 .header-links {
@@ -33,7 +31,7 @@
     font-size: 1rem;
 }
 .header-link {
-    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 @media screen and (max-width: 75rem) {

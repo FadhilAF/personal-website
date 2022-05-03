@@ -3,9 +3,10 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import useLocalStorage from 'use-local-storage';
 import styles from './App.module.css';
 import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
 import Home from './Pages/Home/Home';
 import Blog from './Pages/Blog/Blogs';
-import Footer from './Components/Footer/Footer';
+import Specials from './Pages/Specials/Main/Main';
 
 function App() {
   const location = useLocation();
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Blog" element={<Blog />} />
+          <Route path="/Specials" element={<Specials />} />
         </Routes>
       </div>
       <Footer />

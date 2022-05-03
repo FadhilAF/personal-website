@@ -21,6 +21,9 @@ function Header(props: { path: string; theme: {theme: string; setTheme: any;}}) 
 						<div className={styles["header-link"]}>
 							<Link to={"/Blog"}>Blog</Link>
 						</div>
+						<div className={styles["header-link"]}>
+							<Link to={"/Specials"}>Specials</Link>
+						</div>
 					</div>
 					<div className={styles.switch}>
 						<ToggleSwitch label="Dark Mode" theme={props.theme}/>
