@@ -33,9 +33,9 @@
 @media screen and (max-width: 48rem) {
     .infos {
         grid-template-columns: 1fr;
-        padding: 50px 50px 100px 100px;
+        padding: 40px;
     }
     .logo {
-        width: 6rem;
+        width: 4rem;
     }
 }
