@@ -38,7 +38,6 @@
 
 a {
     color: var(--fg-4);
-    transition: all .5s;
 }
 .social-medias {
     margin-top: .5rem;

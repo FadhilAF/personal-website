@@ -1,6 +1,6 @@
 .header {
     background-color: var(--bg-1);
-    transition: all 0.5s;
+    transition: background-color 0.5s;
     height: 4rem;
     width: 100%;
     position: sticky;/* relative, tapi nempel */
