@@ -1,0 +1,37 @@
+.BURGER-ICON span {
+    background-color: var(--fg-3);
+}
+
+.BURGER-ICON:hover span, .BURGER-ICON:hover span::before, .BURGER-ICON:hover span::after {
+    background-color: var(--link);
+    transition: all .2s;
+}
+
+.BURGER-ICON span::before, .BURGER-ICON span::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 0.25rem;
+    border-radius: 0.125rem;
+    width: 2rem;
+    background-color: var(--fg-3);
+}
+.BURGER-ICON span::before {
+    transform: translateY(-0.625rem);
+}
+.BURGER-ICON span::after {
+    transform: translateY(0.625em);
+}
+.BURGER-ICON.BURGER-CLICKED span {
+    background-color: transparent;
+    transition: background-color .5s ease-in-out;
+}
+
+.BURGER-ICON.BURGER-CLICKED span::before {
+    transform: rotate(45deg);
+    transition: transform .5s ease-in-out;
+}
+.BURGER-ICON.BURGER-CLICKED span::after {
+    transform: rotate(-45deg);
+    transition: transform .5s ease-in-out;
+}

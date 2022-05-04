@@ -1,6 +1,7 @@
 .toggle-switch {
   position: relative;
   width: 75px;
+  height: 36px;
   display: block;
   text-align: left;
 }
@@ -34,14 +35,13 @@
 .inner:before {
   content: url(../../../Assets/lightMode.svg);
   padding-top: 2px;
-  padding-left: 4px;
+  padding-left: 3px;
   background-color: var(--bg-3);
 }
 .inner:after {
   content: url(../../../Assets/darkMode.svg);
-  margin: auto;
   padding-top: 6px;
-  padding-right: 10px;
+  padding-right: 7px;
   background-color: var(--bg-3);
   text-align: right;
 }
@@ -49,7 +49,7 @@
   display: block;
   width: 24px;
   height: 24px;
-  margin: 6px 4.5px 6px 6px;
+  margin: 6px 5px 6px 6px;
   background: var(--fg-4);
   position: absolute;
   top: 0;

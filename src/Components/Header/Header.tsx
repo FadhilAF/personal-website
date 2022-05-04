@@ -2,6 +2,7 @@ import styles from './Header.module.css';
 import logo from '../../Assets/logo.svg';
 import { Link } from "react-router-dom";
 import ToggleSwitch from './ToggleSwitch/ToggleSwitch';
+import HeaderLinks from './HeaderLinks/HeaderLinks';
 
 function Header(props: { path: string; theme: {theme: string; setTheme: any;}}) {
 
@@ -14,17 +15,7 @@ function Header(props: { path: string; theme: {theme: string; setTheme: any;}}) 
 					</Link>
 				</div>
 				<div className={styles["non-logo"]}>
-					<div className={styles["header-links"]}>
-						<div className={styles["header-link"]}>
-							<Link to={"/"}>Home</Link>
-						</div>
-						<div className={styles["header-link"]}>
-							<Link to={"/Blog"}>Blog</Link>
-						</div>
-						<div className={styles["header-link"]}>
-							<Link to={"/Specials"}>Specials</Link>
-						</div>
-					</div>
+					<HeaderLinks />
 					<div className={styles.switch}>
 						<ToggleSwitch label="Dark Mode" theme={props.theme}/>
 					</div>
