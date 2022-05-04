@@ -1,0 +1,9 @@
+.dropdown {
+    position: relative;
+    display: block;
+    padding-bottom: 8px;
+}
+
+.section {
+    margin: 16px;
+}

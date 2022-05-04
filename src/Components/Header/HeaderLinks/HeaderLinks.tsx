@@ -1,16 +1,14 @@
 import { Link } from "react-router-dom";
 import  styles from './HeaderLinks.module.css';
-import useIfPhone from '../../CustomHooks/useIsPhone';
 import Burger from './Burger/Burger';
 
-function HeaderLinks() {
-  const isPhone = useIfPhone();
+function HeaderLinks(props: {navState: {isNavOpen: boolean, setIsNavOpen: any}, isPhone: boolean}) {
 
-  if (isPhone) {
+  if (props.isPhone) {    
       return (
         <div className={styles["header-links"]}>
             <div className={styles["header-link"]}>
-                <Burger />
+                <Burger navState={props.navState}/>
             </div>
         </div>
       );

@@ -1,15 +1,19 @@
 .header {
     background-color: var(--bg-1);
     transition: background-color 0.5s;
-    height: 4rem;
-    width: 100%;
     position: sticky;/* relative, tapi nempel */
     top: 0; /* harus kasih tahu dimano lokasi dio pas sticky agek */
+}
+
+.navbar {
+    position: relative;
+    height: 4rem;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.header-content {
+.navbar-content {
     position: absolute;
     display: flex;
     width : 70rem;
@@ -18,7 +22,7 @@
     justify-content: space-between;
 }
 
-.header-content img {
+.navbar-content img {
     height: 2.5rem;
 }
 
@@ -28,12 +32,12 @@
 }
 
 @media screen and (max-width: 75rem) {
-    .header-content {
+    .navbar-content {
         width: calc(100% - 80px);
     }
 }
 @media screen and (max-width: 33.75rem ) {
-    .header-content {
+    .navbar-content {
         width: calc(100% - 24px);
     }
 }
