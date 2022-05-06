@@ -1,0 +1,24 @@
+.title-desc {
+    width: 32rem;
+}
+
+.blog-container {
+    width: 42rem;
+    background-color: var(--bg-2);
+    transition: background-color .5s;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+}
+
+@media screen and (max-width: 44rem) {
+    .blog-container {
+        width: calc(100% - 2rem);
+    }
+}
+
+@media screen and (max-width: 540px) {
+    /*change card style*/
+    .title-desc {
+        width: calc(100% - 2rem);
+    }
+}

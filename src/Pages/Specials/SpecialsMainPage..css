@@ -1,0 +1,10 @@
+.title-desc {
+    width: 32rem;
+}
+
+@media screen and (max-width: 540px) {
+    /*change card style*/
+    .title-desc {
+        width: calc(100% - 2rem);
+    }
+}

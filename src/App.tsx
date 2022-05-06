@@ -6,7 +6,7 @@ import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import Home from './Pages/Home/Home';
 import Blog from './Pages/Blog/Blogs';
-import Specials from './Pages/Specials/Main/Main';
+import Specials from './Pages/Specials/SpecialsMainPage';
 
 function App() {
   const location = useLocation();

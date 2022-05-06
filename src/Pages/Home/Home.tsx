@@ -4,7 +4,8 @@ function Home() {
     document.title = 'FadhilAF - Home Page';
     return (
         <div>
-            Home
+            <p className="text-2xl font-bold m-8">Home</p>
+            Welcome to my website,
         </div>
     )
 }

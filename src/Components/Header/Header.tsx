@@ -13,9 +13,10 @@ function Header(props: { path: string; theme: {theme: string; setTheme: any;}}) 
 	const isPhone = useIfPhone();
 	const [isNavOpen, setIsNavOpen] = useState(false);
 	const dropdownTransition = useTransition(isNavOpen, {
-		from: {x: 0, y:-100, opacity: 0},
-		enter: {x: 0, y: 0, opacity: 1},
-		leave: {x: 0, y:-100, opacity: 0}
+		config: {duration: 300},//utk config durasi dll (duration dalam bentuk ms)
+		from: {x: 0, y:-100, opacity: 0},//posisi awal (x,y dalam bentuk persen lokasi benda pas enter)
+		enter: {x: 0, y: 0, opacity: 1},//posisi pas diteken
+		leave: {x: 0, y:-100, opacity: 0}//posisi pas ngilang lagi
 	});
 
     return (
@@ -33,7 +34,7 @@ function Header(props: { path: string; theme: {theme: string; setTheme: any;}}) 
 					</div>
 				</div>
 			</div>
-			{dropdownTransition((style, item) => //item itu gek diisi isNavOpen, style itu diisi oleh from enter leave
+			{isPhone && dropdownTransition((style, item) => //item itu gek diisi isNavOpen, style itu diisi oleh from enter leave
 				item?<animated.div style={style} ><DropdownHeader /></animated.div>: ''//himpit animated.div
 			)}
 		</div>
