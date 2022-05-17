@@ -23,7 +23,7 @@
     position: absolute;
     height: 1rem;
     width: 95%;
-    bottom: 160px;
+    bottom: 80px;
 }
 
 @media screen and (max-width: 75rem) {

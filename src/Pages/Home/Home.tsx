@@ -14,7 +14,7 @@ function Home() {
                             .typeString("Muhammad")
                             .pauseFor(1000)
                             .typeString(" Fadhil Al-Fatih")
-                            .pauseFor(6000)
+                            .pauseFor(5000)
                             .start();
                     }}/> 
                 </div>
