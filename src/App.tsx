@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import useLocalStorage from 'use-local-storage';
 import styles from './App.module.css';
 import Header from './Components/Header/Header';

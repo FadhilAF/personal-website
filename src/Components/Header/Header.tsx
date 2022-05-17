@@ -19,9 +19,11 @@ function Header(props: { path: string; theme: {theme: string; setTheme: any;}}) 
 		leave: {x: 0, y:-100, opacity: 0}//posisi pas ngilang lagi
 	});
 
+	const pages = ["Blog", "Specials"];
+
     return (
-		<div className={styles.header}>
-			<div className={`${styles.navbar} ${props.path !== '/' && styles['home-navbar']}`}>
+		<div className={`${ styles.header } ${ props.path !== "/"  || styles['home-header'] }`}>
+			<div className={styles.navbar}>
 				<div className={styles["navbar-content"]}>
 					<div className={styles.logo}>
 						<Link to={"/"}>
@@ -29,13 +31,13 @@ function Header(props: { path: string; theme: {theme: string; setTheme: any;}}) 
 						</Link>
 					</div>
 					<div className={styles["non-logo"]}>
-						<HeaderLinks isPhone={isPhone} navState={{isNavOpen, setIsNavOpen}} />
+						<HeaderLinks pages={pages} isPhone={isPhone} navState={{isNavOpen, setIsNavOpen}} />
 						<ToggleSwitch label="Dark Mode" theme={props.theme}/>
 					</div>
 				</div>
 			</div>
 			{isPhone && dropdownTransition((style, item) => //item itu gek diisi isNavOpen, style itu diisi oleh from enter leave
-				item?<animated.div style={style} ><DropdownHeader /></animated.div>: ''//himpit animated.div
+				item?<animated.div style={style} ><DropdownHeader navState={{isNavOpen, setIsNavOpen}} pages={pages}/></animated.div>: ''//himpit animated.div
 			)}
 		</div>
     )

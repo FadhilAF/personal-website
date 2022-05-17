@@ -6,6 +6,11 @@
     z-index: 1;
 }
 
+.home-header {
+    position: fixed;
+    width: 100%;
+}
+
 .navbar {
     position: relative;
     height: 4rem;
@@ -15,7 +20,7 @@
 }
 
 .navbar-content {
-    position: absolute;
+    position: relative;
     display: flex;
     width : 70rem;
     height: 100%;
@@ -30,6 +35,9 @@
 .non-logo {
     display: flex;
     align-items: center;
+}
+
+.logo {
 }
 
 @media screen and (max-width: 75rem) {

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import  styles from './HeaderLinks.module.css';
 import Burger from './Burger/Burger';
 
-function HeaderLinks(props: {navState: {isNavOpen: boolean, setIsNavOpen: any}, isPhone: boolean}) {
+function HeaderLinks(props: {pages: (string)[], navState: {isNavOpen: boolean, setIsNavOpen: any}, isPhone: boolean}) {
 
   if (props.isPhone) {    
       return (
@@ -16,16 +16,18 @@ function HeaderLinks(props: {navState: {isNavOpen: boolean, setIsNavOpen: any}, 
       return (
         <div className={styles["header-links"]}>
             <div className={styles["header-link"]}>
-                <Link to={"/"}>Home</Link>
+                <Link to="/">Home</Link>
             </div>
-            <div className={styles["header-link"]}>
-                <Link to={"/Blog"}>Blog</Link>
-            </div>
-            <div className={styles["header-link"]}>
-                <Link to={"/Specials"}>Specials</Link>
-            </div>
+            {props.pages.map((page) => {
+                return(
+                    <div className={styles["header-link"]}>
+                        <Link to={`/${page}`} key={page}>{page}</Link>
+                    </div>
+                )
+            })}
+            
         </div>
-      );
+      );//tiap renderan .map ini harus dikasih key, biar si react biso bedai mano yang perlu di re-render atau idak, biasonyo key itu dari value yg kito ambek tulah
   }
 }
 
