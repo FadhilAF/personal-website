@@ -9,8 +9,8 @@ function DropdownHeader(props: {pages: (string)[], navState: {isNavOpen: boolean
             </div>
             {props.pages.map((page) => {
                 return (
-                    <div className={styles.section}>
-                        <Link to={`/${page}`} onClick={()=>{props.navState.setIsNavOpen(!props.navState.isNavOpen)}} key={page}>{page}</Link>
+                    <div className={styles.section} key={page}>
+                        <Link to={`/${page}`} onClick={()=>{props.navState.setIsNavOpen(!props.navState.isNavOpen)}}>{page}</Link>
                     </div>
                 )
             })}

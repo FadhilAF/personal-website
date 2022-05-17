@@ -20,14 +20,14 @@ function HeaderLinks(props: {pages: (string)[], navState: {isNavOpen: boolean, s
             </div>
             {props.pages.map((page) => {
                 return(
-                    <div className={styles["header-link"]}>
-                        <Link to={`/${page}`} key={page}>{page}</Link>
+                    <div className={styles["header-link"]} key={page}>
+                        <Link to={`/${page}`}>{page}</Link>
                     </div>
                 )
             })}
             
         </div>
-      );//tiap renderan .map ini harus dikasih key, biar si react biso bedai mano yang perlu di re-render atau idak, biasonyo key itu dari value yg kito ambek tulah
+      );//tiap renderan .map ini harus dikasih key (dan harus di outermost element), biar si react biso bedai mano yang perlu di re-render atau idak, biasonyo key itu dari value yg kito ambek tulah
   }
 }
 
