@@ -23,7 +23,7 @@
     position: absolute;
     height: 1rem;
     width: 95%;
-    bottom: 3rem;
+    bottom: 160px;
 }
 
 @media screen and (max-width: 75rem) {
@@ -43,7 +43,7 @@
 
 @media screen and (max-width: 25rem) {
    .name {
-       width: 300px;
+       width: 250px;
        font-size: 2rem;
        height: 100px;
    } 
