@@ -1,6 +1,7 @@
 import './App.css';
 import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import useLocalStorage from 'use-local-storage';
+import ScrollToTop from './Components/CustomHooks/scrollToTop';
 import styles from './App.module.css';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
@@ -18,10 +19,11 @@ function App() {
     <div className="App" data-theme={theme}>
       <Header path={location.pathname} theme={{theme, setTheme}}/>
       <div className={styles.body}>
+        <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Blog" element={<Blog />} />
-          <Route path="/Specials" element={<Specials />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/specials" element={<Specials />} />
         </Routes>
       </div>
       <Footer />

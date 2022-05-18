@@ -7,13 +7,11 @@ function DropdownHeader(props: {pages: (string)[], navState: {isNavOpen: boolean
             <div className={styles.section}>
                 <Link to="/" onClick={()=>{props.navState.setIsNavOpen(!props.navState.isNavOpen)}}>Home</Link>
             </div>
-            {props.pages.map((page) => {
-                return (
+            {props.pages.map((page) => (
                     <div className={styles.section} key={page}>
                         <Link to={`/${page}`} onClick={()=>{props.navState.setIsNavOpen(!props.navState.isNavOpen)}}>{page}</Link>
                     </div>
-                )
-            })}
+            ))}
         </div>
     );//perlu tambah key={} biar react tau mano yg perlu rerender atau dk usah
 }

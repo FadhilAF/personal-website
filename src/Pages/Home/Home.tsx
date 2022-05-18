@@ -18,7 +18,9 @@ function Home() {
                             .start();
                     }}/> 
                 </div>
-                <div className={styles.desc}>Hello, welcome to my personal website!</div> 
+                <div className={styles.desc}>
+                    Hello, welcome to my personal website!
+                </div> 
             </div>
         </div>
     )//&#8209; = non breaking hypen
