@@ -9,7 +9,7 @@ function DropdownHeader(props: {pages: (string)[], navState: {isNavOpen: boolean
             </div>
             {props.pages.map((page) => (
                     <div className={styles.section} key={page}>
-                        <Link to={`/${page}`} onClick={()=>{props.navState.setIsNavOpen(!props.navState.isNavOpen)}}>{page}</Link>
+                        <Link to={`/${page.toLowerCase()}`} onClick={()=>{props.navState.setIsNavOpen(!props.navState.isNavOpen)}}>{page}</Link>
                     </div>
             ))}
         </div>

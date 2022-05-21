@@ -20,7 +20,7 @@ function HeaderLinks(props: {pages: (string)[], navState: {isNavOpen: boolean, s
             </div>
             {props.pages.map((page) => (
                     <div className={styles["header-link"]} key={page}>
-                        <Link to={`/${page}`}>{page}</Link>
+                        <Link to={`/${page.toLowerCase()}`}>{page}</Link>
                     </div>
             ))}
             

@@ -1,3 +1,13 @@
+.title-container {
+    min-height: 200px;
+    background-image: url(../../Assets/specialsBg.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 95%;
+    text-shadow: -1px -1px 0 var(--bg-1), 1px -1px 0 var(--bg-1), -1px 1px 0 var(--bg-1), 1px 1px 0 var(--bg-1);
+    transition: text-shadow .5s;
+} 
+
 .title-desc {
     width: 32rem;
 }
