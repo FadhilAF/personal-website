@@ -24,6 +24,7 @@ a:hover {
   -khtml-user-select: none;
   -ms-user-select: none;
 }
+
 .no-select:focus {
   outline: none !important;
 }

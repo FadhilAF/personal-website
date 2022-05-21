@@ -1,9 +1,13 @@
 .header {
     background-color: var(--bg-1);
-    transition: background-color 0.5s;
+    transition: all .5s;
     position: sticky;/* relative, tapi nempel */
     top: 0; /* harus kasih tahu dimano lokasi dio pas sticky agek */
     z-index: 1;
+}
+
+.hide-header {
+    top: -4rem;
 }
 
 .home-header {
@@ -35,9 +39,6 @@
 .non-logo {
     display: flex;
     align-items: center;
-}
-
-.logo {
 }
 
 @media screen and (max-width: 75rem) {

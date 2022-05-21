@@ -7,7 +7,7 @@ import instagramLogo from '../../Assets/instagram.svg';
 import githubLogo from '../../Assets/github.svg';
 import linkedinLogo from '../../Assets/linkedin.svg';
 
-function Footer() {
+function Footer(props: {path: string}) {
     return (
         <>
             <Wave />

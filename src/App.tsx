@@ -2,12 +2,12 @@ import './App.css';
 import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import useLocalStorage from 'use-local-storage';
 import ScrollToTop from './Components/CustomHooks/scrollToTop';
-import styles from './App.module.css';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import Home from './Pages/Home/Home';
 import Blog from './Pages/Blog/Blogs';
 import Specials from './Pages/Specials/SpecialsMainPage';
+import Login from './Pages/Authentication/Login/Login';
 
 function App() {
   const location = useLocation();
@@ -18,15 +18,14 @@ function App() {
   return (
     <div className="App" data-theme={theme}>
       <Header path={location.pathname} theme={{theme, setTheme}}/>
-      <div className={styles.body}>
-        <ScrollToTop/>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/specials" element={<Specials />} />
-        </Routes>
-      </div>
-      <Footer />
+      <ScrollToTop/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/specials" element={<Specials />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+      <Footer path={location.pathname}/>
     </div>
   )
 }
