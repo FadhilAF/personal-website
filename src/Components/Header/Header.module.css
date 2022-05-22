@@ -1,6 +1,6 @@
 .header {
     background-color: var(--bg-1);
-    transition: all .5s;
+    transition: background-color .5s, top .3s;
     position: sticky;/* relative, tapi nempel */
     top: 0; /* harus kasih tahu dimano lokasi dio pas sticky agek */
     z-index: 1;

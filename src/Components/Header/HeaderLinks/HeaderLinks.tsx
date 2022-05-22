@@ -8,7 +8,7 @@ function HeaderLinks(props: {pages: (string)[], navState: {isNavOpen: boolean, s
       return (
         <div className={styles["header-links"]}>
             <div className={styles["header-link"]}>
-                <Burger navState={props.navState}/>
+                <Burger navState={props.navState} />
             </div>
         </div>
       );

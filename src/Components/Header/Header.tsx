@@ -21,26 +21,25 @@ function Header(props: { path: string; theme: {theme: string; setTheme: any;}}) 
 
 	const controlNavbar = () => {
 		if (typeof window !== 'undefined') { 
-		if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
-			setHide(true);
-			setIsNavOpen(false); 
-		} else { // if scroll up show the navbar
-			setHide(false);  
-		}
+			if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+				setHide(true);
+			} else { // if scroll up show the navbar
+				setHide(false);  
+			}
 
-		// remember current page location to use in the next move
-		setLastScrollY(window.scrollY); 
+			// remember current page location to use in the next move
+			setLastScrollY(window.scrollY); 
 		}
 	};
 
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
-		window.addEventListener('scroll', controlNavbar);
+			window.addEventListener('scroll', controlNavbar);
 
-		// cleanup function
-		return () => {
-			window.removeEventListener('scroll', controlNavbar);
-		};
+			// cleanup function
+			return () => {
+				window.removeEventListener('scroll', controlNavbar);
+			};
 		}
 	}, [lastScrollY]);
 	//fungsi untuk biar scroll ke pocok ilang selesai
@@ -53,7 +52,7 @@ function Header(props: { path: string; theme: {theme: string; setTheme: any;}}) 
 	});
 
     return (
-		<div className={`${ styles.header } ${ props.path !== "/"  || styles['home-header'] } ${ hide && styles['hide-header']}`}>
+		<div className={`${ styles.header } ${ props.path !== "/"  || styles['home-header'] } ${ hide && !isNavOpen && styles['hide-header'] }`}>
 			<div className={styles.navbar}>
 				<div className={styles["navbar-content"]}>
 					<div className={styles.logo}>
@@ -62,7 +61,7 @@ function Header(props: { path: string; theme: {theme: string; setTheme: any;}}) 
 						</Link>
 					</div>
 					<div className={styles["non-logo"]}>
-						<HeaderLinks pages={pages} isPhone={isPhone} navState={{isNavOpen, setIsNavOpen}}/>
+						<HeaderLinks pages={pages} isPhone={isPhone} navState={{isNavOpen, setIsNavOpen}} />
 						<ToggleSwitch label="Dark Mode" theme={props.theme}/>
 					</div>
 				</div>
