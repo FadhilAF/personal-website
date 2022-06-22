@@ -6,8 +6,9 @@ import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/read-track">
       <App />
     </BrowserRouter>
   </React.StrictMode>
-)
+)// baca https://stackoverflow.com/questions/70395443/deploying-vite-js-react-build-to-gh-pages
+//tentang BrowserRouter
