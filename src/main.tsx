@@ -6,7 +6,7 @@ import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter basename="/read-track">
+    <BrowserRouter basename={import.meta.env?.VITE_IS_GITHUB_IO? "/read-track" : ""}>
       <App />
     </BrowserRouter>
   </React.StrictMode>
