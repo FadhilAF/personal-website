@@ -28,9 +28,11 @@ function Home() {
             <div className={styles.login}>
                 <LoginBorderUp />
                     <div className={styles['home-login-content']}>
-                        <p className= { `font-bold text-lg ${styles['p-login']}` } >
-                            Here's the login button to authenticate
-                        </p>
+                        <div className={styles['p-login']}>
+                            <p className= { 'font-bold text-lg' } >
+                                Here's the login button to authenticate
+                            </p>
+                        </div>
                         <p className='font-light m-8'> 
                             (not everyone could create an account, its mostly my family through direct contact with me)
                         </p>
