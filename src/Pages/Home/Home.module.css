@@ -26,6 +26,10 @@
     bottom: 80px;
 }
 
+.p-login {
+    width: 80%;
+}
+
 .login {
     background-color: var(--bg-2);
     transition: background-color .5s;

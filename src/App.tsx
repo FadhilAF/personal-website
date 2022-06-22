@@ -11,7 +11,7 @@ import Login from './Pages/Authentication/Login/Login';
 
 function App() {
   const location = useLocation();
-
+  
   const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches; //kalo misal lah ado settingan di browsernyo "prefer dark", langsung didefaultken dark
   const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
 

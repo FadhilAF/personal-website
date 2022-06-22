@@ -52,7 +52,7 @@ function Header(props: { path: string; theme: {theme: string; setTheme: any;}}) 
 	});
 
     return (
-		<div className={`${ styles.header } ${ props.path !== "/"  || styles['home-header'] } ${ hide && !isNavOpen && styles['hide-header'] }`}>
+		<div className={`${ styles.header } ${ [ '/', '/login' ].includes( props.path ) && styles['home-header'] } ${ hide && !isNavOpen && styles['hide-header'] }`}>
 			<div className={styles.navbar}>
 				<div className={styles["navbar-content"]}>
 					<div className={styles.logo}>
