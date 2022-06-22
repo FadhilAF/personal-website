@@ -3,6 +3,7 @@
     transition: background-color .5s, top .3s;
     position: sticky;/* relative, tapi nempel */
     top: 0; /* harus kasih tahu dimano lokasi dio pas sticky agek */
+    left: 0;
     z-index: 1;
 }
 
