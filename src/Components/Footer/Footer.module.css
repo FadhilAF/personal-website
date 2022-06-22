@@ -1,71 +1,71 @@
 .infos {
-    background-color: var(--bg-3);
-    display: grid;
-    grid-template-columns: 75px 1fr 1fr;
-    gap: 5rem;
-    padding: 30px 80px 80px 80px;
-    text-align: left;
-    font-size: 0.875rem;
-    color: var(--fg-4);
-    transition: all 0.5s;
-} 
+  background-color: var(--bg-3);
+  display: grid;
+  grid-template-columns: 75px 1fr 1fr;
+  gap: 5rem;
+  padding: 30px 80px 80px 80px;
+  text-align: left;
+  font-size: 0.875rem;
+  color: var(--fg-4);
+  transition: all 0.5s;
+}
 
 .logo {
-    width: 100%;
+  width: 100%;
 }
 
 .about-page {
-    display: block;
-    padding: 0;
+  display: block;
+  padding: 0;
 }
 
 .about-me {
-    display: block;
+  display: block;
 }
 
 .title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 0.125rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0.125rem;
 }
 
 .subtitle {
-    font-weight: bold;
-    margin-top: 1rem;
-    margin-bottom: 0.125rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.125rem;
 }
 
 a {
-    color: var(--fg-4);
+  color: var(--fg-4);
 }
 .social-medias {
-    margin-top: .5rem;
-    display: flex;
+  margin-top: 0.5rem;
+  display: flex;
 }
-.social-medias a{
-    margin-right: 1rem;
+.social-medias a {
+  margin-right: 1rem;
 }
 
 .social-media-icon {
-    height: 1.5rem;
-    display: block;
-    fill: var(--fg-4);
+  height: 1.5rem;
+  display: block;
+  fill: var(--fg-4);
 }
 
 a:hover .social-media-icon {
-    height: 1.5rem;
-    display: block;
-    fill: var(--link);
-    transition: all .2s;
+  height: 1.5rem;
+  display: block;
+  fill: var(--link);
+  transition: all 0.2s;
 }
 
 @media screen and (max-width: 860px) {
-    .infos {
-        grid-template-columns: 1fr;
-        padding: 40px;
-    }
-    .logo {
-        width: 4rem;
-    }
+  .infos {
+    grid-template-columns: 1fr;
+    padding: 40px;
+  }
+  .logo {
+    width: 4rem;
+  }
 }

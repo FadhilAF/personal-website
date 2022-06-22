@@ -1,54 +1,54 @@
 .header {
-    background-color: var(--bg-1);
-    transition: background-color .5s, top .3s;
-    position: sticky;/* relative, tapi nempel */
-    top: 0; /* harus kasih tahu dimano lokasi dio pas sticky agek */
-    left: 0;
-    z-index: 1;
+  background-color: var(--bg-1);
+  transition: background-color 0.5s, top 0.3s;
+  position: sticky; /* relative, tapi nempel */
+  top: 0; /* harus kasih tahu dimano lokasi dio pas sticky agek */
+  left: 0;
+  z-index: 1;
 }
 
 .hide-header {
-    top: -4rem;
+  top: -4rem;
 }
 
 .home-header {
-    position: fixed;
-    width: 100%;
+  position: fixed;
+  width: 100%;
 }
 
 .navbar {
-    position: relative;
-    height: 4rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  position: relative;
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar-content {
-    position: relative;
-    display: flex;
-    width : 70rem;
-    height: 100%;
-    align-items: center;
-    justify-content: space-between;
+  position: relative;
+  display: flex;
+  width: 70rem;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar-content img {
-    height: 2.5rem;
+  height: 2.5rem;
 }
 
 .non-logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (max-width: 75rem) {
-    .navbar-content {
-        width: calc(100% - 80px);
-    }
+  .navbar-content {
+    width: calc(100% - 80px);
+  }
 }
-@media screen and (max-width: 33.75rem ) {
-    .navbar-content {
-        width: calc(100% - 24px);
-    }
+@media screen and (max-width: 33.75rem) {
+  .navbar-content {
+    width: calc(100% - 24px);
+  }
 }

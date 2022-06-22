@@ -1,18 +1,18 @@
 .login-container-background {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .login-container {
-    background-color: var(--bg-2);
-    width: 22.25rem;
-    border-radius: 20px;
-    padding: 32px;
+  background-color: var(--bg-2);
+  width: 22.25rem;
+  border-radius: 20px;
+  padding: 32px;
 }
 
 .login-container img {
-    width: 5rem;
-    margin: auto;
+  width: 5rem;
+  margin: auto;
 }

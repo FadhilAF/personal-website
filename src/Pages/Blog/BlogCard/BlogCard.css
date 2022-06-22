@@ -1,53 +1,54 @@
 .card {
-    position: relative;
-    width: 100%;
-    grid-template-columns: 7rem 1fr;
+  position: relative;
+  width: 100%;
+  grid-template-columns: 7rem 1fr;
 }
 
 .card-image {
-    width: 7rem;
-    height: 7rem;
+  width: 7rem;
+  height: 7rem;
 }
 
 .category {
-    color: var(--category);
+  color: var(--category);
 }
 
 .description {
-    min-height: 2rem;/* biar jangan lebih pendek dari 2 rem, tapi dpp lebih*/
+  min-height: 2rem; /* biar jangan lebih pendek dari 2 rem, tapi dpp lebih*/
 }
 
 .line {
-    border-top: 1px solid var(--fg-1);
-    transition: all .5s;
+  border-top: 1px solid var(--fg-1);
+  transition: all 0.5s;
 }
 
 .profile {
-    bottom: 0;
+  bottom: 0;
 }
 .profile-picture {
-    background-color: var(--fg-1);
-    transition: all .5s;
+  background-color: var(--fg-1);
+  transition: all 0.5s;
 }
 
-@media screen and (max-width: 540px){
-    .card {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .card-image {
-        width: 10rem;
-        height: 10rem;
-        margin: auto;
-    }
-    .category {
-        text-align: center;
-        margin-top: 0.25rem;
-    }
-    .title, .description {
-        text-align: center;
-    }
-    .profile {
-        justify-content: center;/** kan container flex tuh cuma container, jadi yand ditengahi tuh isinyo, maka justify-content center  */
-    }
+@media screen and (max-width: 540px) {
+  .card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .card-image {
+    width: 10rem;
+    height: 10rem;
+    margin: auto;
+  }
+  .category {
+    text-align: center;
+    margin-top: 0.25rem;
+  }
+  .title,
+  .description {
+    text-align: center;
+  }
+  .profile {
+    justify-content: center; /** kan container flex tuh cuma container, jadi yand ditengahi tuh isinyo, maka justify-content center  */
+  }
 }

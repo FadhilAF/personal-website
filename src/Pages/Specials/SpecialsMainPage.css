@@ -1,60 +1,61 @@
 .title-container {
-    min-height: 200px;
-    background-image: url(../../Assets/specialsBg.svg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center 95%;
-    text-shadow: -1px -1px 0 var(--bg-1), 1px -1px 0 var(--bg-1), -1px 1px 0 var(--bg-1), 1px 1px 0 var(--bg-1);
-    transition: text-shadow .5s;
-} 
+  min-height: 200px;
+  background-image: url(../../Assets/specialsBg.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center 95%;
+  text-shadow: -1px -1px 0 var(--bg-1), 1px -1px 0 var(--bg-1),
+    -1px 1px 0 var(--bg-1), 1px 1px 0 var(--bg-1);
+  transition: text-shadow 0.5s;
+}
 
 .title-desc {
-    width: 32rem;
+  width: 32rem;
 }
 
 .topic-container {
-    transition: background-color .5s;
+  transition: background-color 0.5s;
 }
 
 .topic-container-odd {
-    background-color: var(--bg-1);
+  background-color: var(--bg-1);
 }
 
 .topic-container-even {
-    background-color: var(--bg-2);
+  background-color: var(--bg-2);
 }
 
 .topic {
-    transition: background-color .5s;
+  transition: background-color 0.5s;
 }
 
 .topic-title {
-    font-weight: bold;
-    font-size: 1.25rem;
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 .topic-desc {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 .topic-odd {
-    background-color: var(--bg-2);
+  background-color: var(--bg-2);
 }
 
 .topic-even {
-    background-color: var(--bg-1);
+  background-color: var(--bg-1);
 }
 
 .separator-odd {
-    fill: var(--bg-2);
+  fill: var(--bg-2);
 }
 
 .separator-even {
-    fill: var(--bg-1);
+  fill: var(--bg-1);
 }
 
 @media screen and (max-width: 33.75rem) {
-    /*change card style*/
-    .title-desc {
-        width: calc(100% - 2rem);
-    }
+  /*change card style*/
+  .title-desc {
+    width: calc(100% - 2rem);
+  }
 }
