@@ -128,7 +128,16 @@ const FirstBlog = () => {
             <p>
               We already got the idea, now just need to write that algorithm
               into a programming language and turn that number intepretation
-              back to brackets
+              back to brackets. I will explain every component of my code and
+              the python concept (you can access the full code{" "}
+              <a
+                target="_blank"
+                href="https://gist.github.com/FadhilAF/02b561e5693f512781a70704d937ad66"
+                className="underline"
+              >
+                here
+              </a>
+              )
             </p>
           </>
         ) : (
