@@ -28,7 +28,9 @@ function BlogCard() {
   const navigateParams = useNavigateParams();
   return (
     <div
-      onClick={() => {navigateParams("/blog/read", {id: props.id})}}
+      onClick={() => {
+        navigateParams("/blog/read", { id: props.id });
+      }}
       className="hover:scale-102 hover:cursor-pointer transition-transform card grid"
     >
       <div className="card-image block bg-white bg-contain bg-center bg-no-repeat bg-[image:url('./Assets/kurung.png')]"></div>

@@ -60,8 +60,29 @@ const FirstBlog = () => {
             <br/>
             <h3 className="text-lg font-bold">1. The Question</h3>
             <p>
-              
-              <a target="_blank" href="https://codeforces.com/contest/1574/problem/A" className="underline">here</a>
+              Basically, the question wants us to output the mathematically valid pattern of brackets, for n many 
+              brackets "()" give n many pattern (you can see the original question <a target="_blank"
+              href="https://codeforces.com/contest/1574/problem/A" className="underline">here</a>). Long story short,
+              my friend already have an answer for it, but still don't feel right because the answer just give n many 
+              pattern. I just think why not make an answer that can give EVERY POSSIBLE pattern of n many brackets. 
+              I'm still not comfortable enough to say that my answer provides every pattern, but i think its cool enough.
+            </p>
+            <br/>
+            <h3 className="text-lg font-bold">2. The Idea</h3>
+            <p>
+              We know that we can put bracket inside of bracket in math like "(())", and put it aside "()()" that's basically 
+              all possible pattern if we only have 2 brackets. If we have 3 brackets the pattern will look like "(()())" or 
+              "(())()". From all of that example, I can organize the pattern by looking at the outer bracket, and bracket 
+              that inside of an another bracket. I can say that for 1 outer bracket, it takes 1 slot, for example: 
+              "(())()" on that we can say that it has 2 outer brackets, so that example took 2 slot "_ _", AND count 
+              how many brackets on every slot, so for "(())()" the answer is "2 1" because one slot has 2 brackets in it and 
+              the other has 1.
+            </p>
+
+            <div className="my-4 h-[150px] bg-gray-300 bg-contain bg-center bg-no-repeat bg-[image:url('./Assets/bracketSlot.png')]"></div>
+
+            <p>
+              So now, we have a new way to interpret that pattern of bracket by using numbers separated by spaces!
             </p>
           </>
         ) : (
