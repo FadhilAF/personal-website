@@ -5,7 +5,8 @@ import ScrollToTop from "./Components/CustomHooks/scrollToTop";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Pages/Home/Home";
-import Blog from "./Pages/Blog/Blogs";
+import Blog from "./Pages/Blog/Blog";
+import FullBlog from "./Pages/Blog/FirstBlog/FirstBlog";
 import Specials from "./Pages/Specials/SpecialsMainPage";
 import Login from "./Pages/Authentication/Login/Login";
 
@@ -25,6 +26,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/read" element={<FullBlog />} />
         <Route path="/specials" element={<Specials />} />
         <Route path="/login" element={<Login />} />
       </Routes>

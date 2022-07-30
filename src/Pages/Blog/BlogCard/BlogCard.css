@@ -4,6 +4,10 @@
   grid-template-columns: 7rem 1fr;
 }
 
+.card:hover {
+  color: var(--blue);
+}
+
 .card-image {
   width: 7rem;
   height: 7rem;

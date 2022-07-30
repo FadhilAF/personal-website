@@ -13,8 +13,6 @@ function Blog() {
       </div>
       <div className="blog-container grid relative mx-auto my-6 px-4 py-6 rounded-xl">
         <BlogCard />
-        <BlogCard />
-        <BlogCard />
       </div>
     </div>
   );

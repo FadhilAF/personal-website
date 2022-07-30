@@ -3,7 +3,6 @@ import Typewriter from "typewriter-effect";
 import { ReactComponent as LoginBorderUp } from "../../Assets/loginBorderUp.svg";
 import { ReactComponent as LoginBorderDown } from "../../Assets/loginBorderDown.svg";
 import GreenButton from "../../Components/Button/GreenButton";
-import { useEffect } from "react";
 
 function Home() {
   document.title = "FadhilAF - Home Page";

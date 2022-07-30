@@ -30,6 +30,9 @@ function SpecialsMainPage() {
     <div>
       <div className="title-container">
         <p className="text-2xl font-bold m-8">Specials</p>
+        <p className="text-red-400 text-2xl font-bold">
+          (page currently not done)
+        </p>
         <div className="m-auto title-desc">
           The topic here could only made by me, and each section is saved by the
           source code (not the database).
