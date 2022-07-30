@@ -128,8 +128,11 @@ const FirstBlog = () => {
             <p>
               We already got the idea, now just need to write that algorithm
               into a programming language and turn that number intepretation
-              back to brackets. I will explain every component of my code and
-              the python concept (you can access the full code{" "}
+              back to brackets. I want to make the program using python
+              generator, so we don't need to wait for every possible pattern
+              finished calculated, and get the answer one by one. I will explain
+              shortly every component of my code and the python concept (you can
+              access the full code{" "}
               <a
                 target="_blank"
                 href="https://gist.github.com/FadhilAF/02b561e5693f512781a70704d937ad66"
@@ -139,6 +142,9 @@ const FirstBlog = () => {
               </a>
               )
             </p>
+
+            <div className="my-4 h-[150px] bg-gray-300 bg-contain bg-center bg-no-repeat bg-[image:url('./Assets/dependencyDiagram.png')]"></div>
+            <p className="text-sm">the dependency diagram for every function</p>
           </>
         ) : (
           <h1 className="text-xl text-center font-bold">Blog Not Found</h1>
