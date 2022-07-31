@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 import "./BlogCard.css";
-import useNavigateParams from "../../../CustomHooks/useNavigateParams";
+import axios from "axios";
 import formatDate from "../../../Utilities/FormatDate";
 
 function BlogCard() {
@@ -25,13 +26,12 @@ function BlogCard() {
       "About how to produce every possible mathematically valid bracket sequences, if given n many brackets. I used recursion and a generator concept with python.",
   };
 
-  const navigateParams = useNavigateParams();
+  const link = axios.getUri({ url: "/blog/read", params: { id: props.id } });
+
   return (
-    <div
-      onClick={() => {
-        navigateParams("/blog/read", { id: props.id });
-      }}
-      className="hover:scale-102 hover:cursor-pointer transition-transform card grid"
+    <Link
+      to={link}
+      className="hover:scale-102 hover:cursor-pointer transition-transform duration-200 card grid"
     >
       <div className="card-image block bg-white bg-contain bg-center bg-no-repeat bg-[image:url('./Assets/kurung.png')]"></div>
       <div className="card-text block relative text-left px-2">
@@ -45,7 +45,7 @@ function BlogCard() {
           <span className="post-date text-sm">{formatDate(props.date)}</span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

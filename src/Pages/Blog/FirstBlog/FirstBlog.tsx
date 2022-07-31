@@ -1,6 +1,18 @@
 import { useLocation } from "react-router-dom";
 import formatDate from "../../../Utilities/FormatDate";
 
+//images
+import algorithmSlot from "../../../Assets/algorithmSlot.png";
+import bracketSlot from "../../../Assets/bracketSlot.png";
+import outputINRSA from "../../../Assets/outputINRSA.png";
+import dependencyDiagram from "../../../Assets/dependencyDiagram.png";
+
+import toBracket from "../../../Assets/toBracket.png";
+import incrementNextRightSlotAlgorithm from "../../../Assets/incrementNextRightSlotAlgorithm.png";
+import slotObjects from "../../../Assets/slotObjects.png";
+import slotIterator from "../../../Assets/slotIterator.png";
+import bracketPatternMaker from "../../../Assets/bracketPatternMaker.png";
+
 const FirstBlog = () => {
   const location = useLocation();
 
@@ -40,7 +52,7 @@ const FirstBlog = () => {
 
   return (
     <div>
-      <div className="m-4 text-left">
+      <div className="container p-4 sm:p-0 sm:mx-auto text-left">
         {data.id === "23102003" ? (
           <>
             <h1 className="text-2xl font-bold">{data.title}</h1>
@@ -49,7 +61,7 @@ const FirstBlog = () => {
               {data.author}, last edited {formatDate(data.date)}
             </div>
 
-            <div className="my-4 h-[150px] bg-gray-300 bg-contain bg-center bg-no-repeat bg-[image:url('./Assets/kurung.png')]"></div>
+            <div className="my-4 h-[150px] bg-contain bg-center bg-no-repeat bg-[image:url('./Assets/kurung.png')]"></div>
 
             <p>
               Solving a great competitive programming question has always been
@@ -57,7 +69,10 @@ const FirstBlog = () => {
               life path. We can let our own creativity to answer the question,
               looking aside on how efficient the solution is. On this blog, I
               want to share my thinking journey to answer this programming
-              question.
+              question. Quick disclaimer, I might do stuff that is unnecessary
+              or even worse all of this is unnecessary. So, I would like to get
+              some feedback, you can contact me through social media (because
+              there is no comment service here).
             </p>
             <br />
             <h3 className="text-lg font-bold">1. The Question</h3>
@@ -95,25 +110,38 @@ const FirstBlog = () => {
               brackets in it and the other has 1.
             </p>
 
-            <div className="my-4 h-[150px] bg-gray-300 bg-contain bg-center bg-no-repeat bg-[image:url('./Assets/bracketSlot.png')]"></div>
+            <div className="max-w-[500px] mx-auto">
+              <img
+                className="mt-4 w-full"
+                src={bracketSlot}
+                alt="picture describing"
+              />
+              <p className="mb-4 text-sm">
+                New way to interpret the pattern of brackets by using numbers
+                separated by spaces
+              </p>
+            </div>
 
-            <p className="text-sm">
-              New way to interpret the pattern of brackets by using numbers
-              separated by spaces
-            </p>
             <p>
               By looking at that and defining the pattern with this new
               definition, we can say every possible pattern of n brackets follow
               the algorithm of this:
             </p>
 
-            <div className="my-4 h-[150px] bg-gray-300 bg-contain bg-center bg-no-repeat bg-[image:url('./Assets/algorithmSlot.png')]"></div>
+            <div className="max-w-[500px] mx-auto">
+              <img
+                className="mt-4 w-full "
+                src={algorithmSlot}
+                alt="picture describing"
+              />
+              <p className="mb-4 text-sm block">
+                for every slot that has bracket more than 1, that slot will
+                increment 1 bracket to the very next right slot, also the if the
+                next right slot has more than 1 too, it will repeat the
+                algorithm.
+              </p>
+            </div>
 
-            <p className="text-sm">
-              for every slot that has bracket more than 1, that slot will
-              increment 1 bracket to the very next right slot, also the if the
-              next right slot has more than 1 too, it will repeat the algorithm.
-            </p>
             <p>
               Okay, about the brackets that inside an another bracket, we can
               see the brackets inside the pattern 3 "((())) and (()())" it gives
@@ -143,8 +171,106 @@ const FirstBlog = () => {
               )
             </p>
 
-            <div className="my-4 h-[150px] bg-gray-300 bg-contain bg-center bg-no-repeat bg-[image:url('./Assets/dependencyDiagram.png')]"></div>
-            <p className="text-sm">the dependency diagram for every function</p>
+            <div className="max-w-[500px] mx-auto">
+              <img
+                className="mt-4 w-full"
+                src={dependencyDiagram}
+                alt="picture describing"
+              />
+              <p className="text-sm">
+                The dependency diagram for every generator
+              </p>
+            </div>
+
+            <br />
+
+            <h4 className="text-md font-bold">
+              incrementNextRightSlotAlgorithm
+            </h4>
+
+            <img
+              className="my-4 max-w-[500px] mx-auto"
+              src={incrementNextRightSlotAlgorithm}
+              alt="picture describing"
+            />
+
+            <p>
+              This generator is the simplest than the other because it depens on
+              itself. And, the generator name already self-described what this
+              generator does. That is, generating the sequence of number that
+              interpret how many brackets there are on every slot. In short,
+              this is just that algorithm we saw before, but in python language
+              form.
+            </p>
+
+            <div className="max-w-[500px] mx-auto">
+              <img
+                className="mt-4 w-full"
+                src={outputINRSA}
+                alt="picture describing"
+              />
+              <p className="text-sm">
+                If you iterate the generator till the end, you will get this
+              </p>
+            </div>
+
+            <br />
+
+            <h4 className="text-md font-bold">toBracket</h4>
+
+            <img
+              className="my-4 max-w-[500px] mx-auto"
+              src={toBracket}
+              alt="picture describing"
+            />
+
+            <p>
+              This generator translate that intepretation (brackets per slot),
+              to the form of real brackets. We can see the basis of this
+              generator is the case when there is only 1 bracket on the slot.
+              Because the only pattern that can be made is "()". If the number
+              of bracket per slot is other than that, the generator asks
+              bracketPatternMaker generator to produce all of the possible
+              pattern of n-1 brackets. After the bracketPatternMaker generator
+              give the pattern, this function put the pattern given inside an
+              outer bracket.
+            </p>
+
+            <br />
+
+            <h4 className="text-md font-bold">bracketPatternMaker</h4>
+
+            <img
+              className="my-4 max-w-[500px] mx-auto"
+              src={bracketPatternMaker}
+              alt="picture describing"
+            />
+
+            <p>
+              The bracketPatternMaker is actually just putting the output from
+              incrementNextRightSlotAlgorithm (which is an array), and then put
+              that array output to the slotObjects generator. After that, the
+              slotObjects generator produce the final bracket pattern.
+            </p>
+
+            <br />
+
+            <h4 className="text-md font-bold">slotObjects & slotIterator</h4>
+
+            <img
+              className="my-4 max-w-[500px] mx-auto"
+              src={slotObjects}
+              alt="picture describing"
+            />
+
+            <p>
+              This generator is making the object of that "number of bracket per
+              slot" intepretation we made, by putting each number in the array
+              to the "toBracket" generator. Because we just made the generator,
+              we need a place to store the output of that generator each time.
+              For that, we need to make another list that contains the output
+              for every objects of the "toBracket" generator.
+            </p>
           </>
         ) : (
           <h1 className="text-xl text-center font-bold">Blog Not Found</h1>
