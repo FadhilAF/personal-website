@@ -1,7 +1,8 @@
 .infos {
   background-color: var(--bg-3);
   display: grid;
-  grid-template-columns: 75px 1fr 1fr;
+  min-width: 0;
+  grid-template-columns: 0.2fr 1fr 1fr;
   gap: 5rem;
   padding: 30px 80px 80px 80px;
   text-align: left;
@@ -15,12 +16,7 @@
 }
 
 .about-page {
-  display: block;
   padding: 0;
-}
-
-.about-me {
-  display: block;
 }
 
 .title {
@@ -63,9 +59,12 @@ a:hover .social-media-icon {
 @media screen and (max-width: 860px) {
   .infos {
     grid-template-columns: 1fr;
-    padding: 40px;
+    padding: 24px;
   }
   .logo {
-    width: 4rem;
+    width: 100%;
+  }
+  .logo-wrapper {
+    max-width: 4rem;
   }
 }

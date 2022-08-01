@@ -12,7 +12,9 @@ function Footer(props: { path: string }) {
     <>
       <Wave />
       <div className={styles.infos}>
-        <img className={styles.logo} src={logo} alt="Logo Website" />
+        <div className={styles["logo-wrapper"]}>
+          <img className={styles.logo} src={logo} alt="Logo Website" />
+        </div>
         <div className={styles["about-page"]}>
           <p className={styles.title}>About this Website</p>
           The first purpose of this website is for me to learn react and

@@ -12,6 +12,8 @@ import incrementNextRightSlotAlgorithm from "../../../Assets/incrementNextRightS
 import slotObjects from "../../../Assets/slotObjects.png";
 import slotIterator from "../../../Assets/slotIterator.png";
 import bracketPatternMaker from "../../../Assets/bracketPatternMaker.png";
+import output from "../../../Assets/output.png";
+import bonus from "../../../Assets/bonus.png";
 
 const FirstBlog = () => {
   const location = useLocation();
@@ -188,11 +190,13 @@ const FirstBlog = () => {
               incrementNextRightSlotAlgorithm
             </h4>
 
-            <img
-              className="my-4 max-w-[500px] mx-auto"
-              src={incrementNextRightSlotAlgorithm}
-              alt="picture describing"
-            />
+            <div className="max-w-[500px] mx-auto">
+              <img
+                className="my-4 w-full"
+                src={incrementNextRightSlotAlgorithm}
+                alt="picture describing"
+              />
+            </div>
 
             <p>
               This generator is the simplest than the other because it depens on
@@ -218,11 +222,13 @@ const FirstBlog = () => {
 
             <h4 className="text-md font-bold">toBracket</h4>
 
-            <img
-              className="my-4 max-w-[500px] mx-auto"
-              src={toBracket}
-              alt="picture describing"
-            />
+            <div className="max-w-[500px] mx-auto">
+              <img
+                className="my-4 w-full"
+                src={toBracket}
+                alt="picture describing"
+              />
+            </div>
 
             <p>
               This generator translate that intepretation (brackets per slot),
@@ -240,11 +246,13 @@ const FirstBlog = () => {
 
             <h4 className="text-md font-bold">bracketPatternMaker</h4>
 
-            <img
-              className="my-4 max-w-[500px] mx-auto"
-              src={bracketPatternMaker}
-              alt="picture describing"
-            />
+            <div className="max-w-[500px] mx-auto">
+              <img
+                className="my-4 w-full"
+                src={bracketPatternMaker}
+                alt="picture describing"
+              />
+            </div>
 
             <p>
               The bracketPatternMaker is actually just putting the output from
@@ -257,20 +265,99 @@ const FirstBlog = () => {
 
             <h4 className="text-md font-bold">slotObjects & slotIterator</h4>
 
-            <img
-              className="my-4 max-w-[500px] mx-auto"
-              src={slotObjects}
-              alt="picture describing"
-            />
+            <div className="max-w-[500px] mx-auto">
+              <img
+                className="my-4 w-full"
+                src={slotObjects}
+                alt="picture describing"
+              />
+            </div>
 
             <p>
               This generator is making the object of that "number of bracket per
               slot" intepretation we made, by putting each number in the array
-              to the "toBracket" generator. Because we just made the generator,
-              we need a place to store the output of that generator each time.
-              For that, we need to make another list that contains the output
-              for every objects of the "toBracket" generator.
+              (the one we got from incrementNextRightSlotAlgorithm) to the
+              "toBracket" generator. Because we just made the generator, we need
+              a place to store the output of that generator each time. For that,
+              we need to make another list that contains the output for every
+              objects of the "toBracket" generator.
             </p>
+
+            <div className="max-w-[500px] mx-auto">
+              <img
+                className="my-4 w-full"
+                src={slotIterator}
+                alt="picture describing"
+              />
+            </div>
+
+            <p>
+              The "slotIterator" generator just iterate the list of "toBracket"
+              generator object that we got from the "slotObjects". The purpose
+              of the iteration is to produce all combination of the "toBracket"
+              output for each index of the list. We need to keep in mind that
+              list in python is passed by reference, so we dont need to bother
+              passing the list value on every depth of recursion. Anyway, this
+              is how the code works:
+            </p>
+
+            <ol className="list-decimal px-8 my-4">
+              <li>
+                Iterate the first index of the list first, until the end of the
+                generator output
+              </li>
+              <li>
+                If the generator reach the end, iterate the next index. then,
+                iterate the first index back again
+              </li>
+            </ol>
+
+            <p>
+              We see that this this generator depends on the "toBracket"
+              generator, but not really. This generator just need the
+              "toBracket" generator to restart the "toBracket" objects that
+              already reach the end of the iteration.
+            </p>
+
+            <div className="max-w-[500px] mx-auto">
+              <img
+                className="mt-4 w-full"
+                src={output}
+                alt="picture describing"
+              />
+              <p className="text-sm">
+                The input and the output from the script
+              </p>
+            </div>
+
+            <br />
+
+            <h3 className="text-lg font-bold">Bonus</h3>
+
+            <p>
+              We could also add a new bracket for the slotObjects generator to
+              save every output from the "toBracket" generator object. That way,
+              we don't need to recalculate things that already calculated
+              before. And also this way, the output can be produced slightly
+              faster than before.
+            </p>
+
+            <div className="max-w-[500px] mx-auto">
+              <img
+                className="my-4 w-full"
+                src={bonus}
+                alt="picture describing"
+              />
+            </div>
+
+            <p>
+              That way, the "slotIterator" doesn't depends on the "toBracket"
+              generator. Because we dont need to restart the generator objects
+              anymore.
+            </p>
+
+            <br />
+            <p>This is the end of the blog, thank you.</p>
           </>
         ) : (
           <h1 className="text-xl text-center font-bold">Blog Not Found</h1>
