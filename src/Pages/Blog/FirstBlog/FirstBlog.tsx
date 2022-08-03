@@ -54,7 +54,7 @@ const FirstBlog = () => {
 
   return (
     <div>
-      <div className="container p-4 sm:p-0 sm:mx-auto text-left">
+      <div className="container md:max-w-screen-md p-4 mx-auto text-left">
         {data.id === "23102003" ? (
           <>
             <h1 className="text-2xl font-bold">{data.title}</h1>
