@@ -41,6 +41,15 @@
   /* outline: 1px solid red; */
 }
 
+@layer components {
+  .green-btn {
+    color: var(--fg-1);
+    background-color: var(--green);
+    transition: color 0.5s;
+    @apply hover:scale-105 px-3 py-1 text-center rounded-lg;
+  }
+}
+
 body {
   margin: 0;
   font-family: "Open Sans";
@@ -70,4 +79,22 @@ code {
 ::-webkit-scrollbar-thumb:hover {
   border: 3px solid var(--fg-1);
   transition: border 0.2s;
+}
+
+/*kalo misal inputan from hasil autocomplete browser, dionyo ngasih background putih defaultnyo, kita tak mau.. jadi ganti*/
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 1rem 1rem var(--bg-3) inset !important;
+  caret-color: var(--fg-1);
+  @apply rounded-none;
+  transition: box-shadow 0.5s;
+}
+
+/*nah text colornyo jugo digantinyo bruhh, default warno digantinyo item, kita tidak mau itu*/
+/*Change text in autofill textbox*/
+input:-webkit-autofill {
+  -webkit-text-fill-color: var(--fg-3) !important;
 }
