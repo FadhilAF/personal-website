@@ -6,6 +6,6 @@ const checkAuth = () => {
   const authCtx = useContext(AuthContext);
   const userData = authCtx?.userData;
 
-  return userData ? <Navigate to="/" /> : <Outlet />;
+  return userData?.role !== "admin" ? <Navigate to="/" /> : <Outlet />;
 };
 export default checkAuth;

@@ -85,7 +85,7 @@ const AuthProvider = (props: { children: JSX.Element }) => {
     token: string
   ) => {
     let response;
-    console.log("sini deck")
+    console.log("sini deck");
     try {
       response = await axios.post<authResponse>(
         baseUrl + "/signup",

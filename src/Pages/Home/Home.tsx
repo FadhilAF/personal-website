@@ -35,14 +35,10 @@ function Home() {
       </div>
       <div className={styles.login}>
         <LoginBorderUp />
-        { userData?.username ? (
+        {userData?.username ? (
           <div className="m-8">
-            <p className="text-xl font-bold">
-              Hello {userData.username}!
-            </p>
-            <p className="text-lg">
-              You have {userData.role} role here
-            </p>
+            <p className="text-xl font-bold">Hello {userData.username}!</p>
+            <p className="text-lg">You have {userData.role} role here</p>
           </div>
         ) : (
           <>

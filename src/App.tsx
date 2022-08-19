@@ -12,7 +12,9 @@ import FullBlog from "./Pages/Blog/FirstBlog/FirstBlog";
 import Specials from "./Pages/Specials/SpecialsMainPage";
 import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
+import Admin from "./Pages/Admin/Admin";
 import CheckAuth from "./Helpers/CheckAuth";
+import CheckAdmin from "./Helpers/CheckAdmin";
 
 function App() {
   const location = useLocation();
@@ -26,17 +28,18 @@ function App() {
   const authCtx = useContext(AuthContext);
   const getAuthenticatedData = authCtx?.getAuthenticatedData;
   const userData = authCtx?.userData;
-  useEffect(()=>{
+  useEffect(() => {
     console.log(userData);
-  }, [userData])
-  useEffect(()=>{
+  }, [userData]);
+  useEffect(() => {
     //kito dak biso ambek value cookie session, gara gara tipenyo HttpOnlyCookie T-T https://stackoverflow.com/a/37674900/13673444
     //demi menghindari xss, jadi kito buat be route baru untuk ngecek ado session apo idak di backendnyo be :v
-    getAuthenticatedData && getAuthenticatedData().then((res) => {
-      if (res.axiosError) console.log(res.axiosError);
-      if (res.error) console.log(res.error);
-    }) 
-  }, [])
+    getAuthenticatedData &&
+      getAuthenticatedData().then((res) => {
+        if (res.axiosError) console.log(res.axiosError);
+        if (res.error) console.log(res.error);
+      });
+  }, []);
 
   return (
     <div className="App" data-theme={theme}>
@@ -47,10 +50,13 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/read" element={<FullBlog />} />
         <Route path="/specials" element={<Specials />} />
-        {/* <Route element={<CheckAuth />}> */}
+        <Route element={<CheckAuth />}>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-        {/* </Route> */}
+        </Route>
+        <Route element={<CheckAdmin />}>
+          <Route path="/admin" element={<Admin />} />
+        </Route>
       </Routes>
       <Footer path={location.pathname} />
     </div>
