@@ -4,7 +4,7 @@ import svgr from "vite-plugin-svgr";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  //harus add base url vite nyo, biar gek kalo akses websitenyo biso langsung dari url, dk perlu tombol nian
   base: "/",
+  //dan ditambah file ini di dist folder: https://stackoverflow.com/a/68096312/13673444, biar biso akses netlify lewat url
   plugins: [react(), svgr()],
 });
