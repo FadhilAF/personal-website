@@ -6,6 +6,10 @@ const checkAuth = () => {
   const authCtx = useContext(AuthContext);
   const userData = authCtx?.userData;
 
-  return userData && (Object.keys(userData).length !== 0) ? <Navigate to="/" /> : <Outlet />;
+  return userData && Object.keys(userData).length !== 0 ? (
+    <Navigate to="/" />
+  ) : (
+    <Outlet />
+  );
 };
 export default checkAuth;

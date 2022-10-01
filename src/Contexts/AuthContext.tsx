@@ -39,7 +39,7 @@ const AuthProvider = (props: { children: JSX.Element }) => {
     ? `${import.meta.env.VITE_API_URL}/auth`
     : "http://localhost:5000/auth";
 
-  const [userData, setUserData] = useState({} as authenticatedData);
+  const [userData, setUserData] = useState<authenticatedData>({});
 
   const getAuthenticatedData = async () => {
     let response;
@@ -85,7 +85,6 @@ const AuthProvider = (props: { children: JSX.Element }) => {
     token: string
   ) => {
     let response;
-    console.log("sini deck");
     try {
       response = await axios.post<authResponse>(
         baseUrl + "/signup",

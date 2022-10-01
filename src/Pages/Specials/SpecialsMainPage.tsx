@@ -1,28 +1,33 @@
+import { Link } from "react-router-dom";
 import "./SpecialsMainPage.css";
 
 function SpecialsMainPage() {
-  document.title = "FadhilAF - Specials Main Page";
+  document.title = "FadhilAF - Specials Page";
 
   const topics = [
     {
-      title: "My Portofolio",
+      title: "My Portfolio",
       description:
         "Describing myself as fast as possible and putting all of my proudest project here",
+      link: "/portfolio",
     },
     {
       title: "Live Chat",
       description:
         "Currently not working, there should be alot of work to make this working",
+      link: ""
     },
     {
       title: "Annoying ad",
       description:
         "I'm making a pop up ad that will make you not able to see the web page (only on this page)",
+      link: ""
     },
     {
       title: "Custom Object",
       description:
         "Place where I put some custom object and should it should look cool.",
+      link: ""
     },
   ];
 
@@ -67,12 +72,16 @@ function SpecialsMainPage() {
                 <path d="M0 77L75 25L150 48L225 32L300 70L375 70L450 27L525 58L600 52L675 76L750 56L825 59L900 56L900 101L825 101L750 101L675 101L600 101L525 101L450 101L375 101L300 101L225 101L150 101L75 101L0 101Z"></path>
               </svg>
             )}
-            <div
-              className={`topic ${index % 2 == 0 ? "topic-odd" : "topic-even"}`}
-            >
-              <h3 className="topic-title">{topic.title}</h3>
-              <p className="topic-desc">{topic.description}</p>
-            </div>
+            <Link to={"/specials" + topic.link}>
+              <div
+                className={`topic ${
+                  index % 2 == 0 ? "topic-odd" : "topic-even"
+                }`}
+              >
+                <h3 className="topic-title">{topic.title}</h3>
+                <p className="topic-desc">{topic.description}</p>
+              </div>
+            </Link>
           </div>
         ))}
         {topics.length % 2 == 1 && (

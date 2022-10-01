@@ -10,6 +10,7 @@ import Home from "./Pages/Home/Home";
 import Blog from "./Pages/Blog/Blog";
 import FullBlog from "./Pages/Blog/FirstBlog/FirstBlog";
 import Specials from "./Pages/Specials/SpecialsMainPage";
+import Portfolio from "./Pages/Specials/Portfolio/Portfolio"
 import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
 import Admin from "./Pages/Admin/Admin";
@@ -46,16 +47,21 @@ function App() {
       <Header path={location.pathname} theme={{ theme, setTheme }} />
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/read" element={<FullBlog />} />
-        <Route path="/specials" element={<Specials />} />
+        <Route path="" element={<Home />} />
+        <Route path="blog"> 
+          <Route path="" element={<Blog />}/>
+          <Route path="read" element={<FullBlog />} />
+        </Route>
+        <Route path="specials"> 
+          <Route path="" element={<Specials />}/>
+          <Route path="portfolio" element={<Portfolio />}/>
+        </Route>
         <Route element={<CheckAuth />}>
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<Signup />} />
         </Route>
         <Route element={<CheckAdmin />}>
-          <Route path="/admin" element={<Admin />} />
+          <Route path="admin" element={<Admin />} />
         </Route>
       </Routes>
       <Footer path={location.pathname} />
