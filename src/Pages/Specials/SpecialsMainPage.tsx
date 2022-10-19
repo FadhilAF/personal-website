@@ -15,19 +15,19 @@ function SpecialsMainPage() {
       title: "Live Chat",
       description:
         "Currently not working, there should be alot of work to make this working",
-      link: ""
+      link: "",
     },
     {
       title: "Annoying ad",
       description:
         "I'm making a pop up ad that will make you not able to see the web page (only on this page)",
-      link: ""
+      link: "",
     },
     {
       title: "Custom Object",
       description:
         "Place where I put some custom object and should it should look cool.",
-      link: ""
+      link: "",
     },
   ];
 
