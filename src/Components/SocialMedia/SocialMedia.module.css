@@ -1,0 +1,23 @@
+a {
+  color: var(--fg-4);
+}
+.social-medias {
+  margin-top: 0.5rem;
+  display: flex;
+}
+.social-medias a {
+  margin-right: 1rem;
+}
+
+.social-media-icon {
+  height: 1.5rem;
+  display: block;
+  fill: var(--fg-4);
+}
+
+a:hover .social-media-icon {
+  height: 1.5rem;
+  display: block;
+  fill: var(--link);
+  transition: all 0.2s;
+}

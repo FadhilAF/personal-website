@@ -32,10 +32,12 @@
 .topic-title {
   font-weight: bold;
   font-size: 1.25rem;
+  width: 32rem;
 }
 
 .topic-desc {
   font-size: 1rem;
+  width: 64rem;
 }
 .topic-odd {
   background-color: var(--bg-2);

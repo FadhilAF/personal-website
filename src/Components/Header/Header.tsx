@@ -12,7 +12,7 @@ function Header(props: {
   path: string;
   theme: { theme: string; setTheme: any };
 }) {
-  const pages = ["Blog", "Specials"];
+  const pages = ["Blog", "Portfolio"];
 
   const isPhone = useIfPhone();
   const [isNavOpen, setIsNavOpen] = useState(false);

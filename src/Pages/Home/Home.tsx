@@ -5,6 +5,7 @@ import { AuthContext } from "../../Contexts/AuthContext";
 import { ReactComponent as LoginBorderUp } from "../../Assets/loginBorderUp.svg";
 import { ReactComponent as LoginBorderDown } from "../../Assets/loginBorderDown.svg";
 import GreenButton from "../../Components/Button/GreenButton";
+import SocialMedia from "../../Components/SocialMedia/SocialMedia";
 
 function Home() {
   document.title = "FadhilAF - Home Page";
@@ -28,6 +29,9 @@ function Home() {
                 .start();
             }}
           />
+          <div className="w-max m-auto">
+            <SocialMedia/>        
+          </div>
         </div>
         <div className={styles.desc}>
           Hello, welcome to my personal website!
